@@ -1,4 +1,9 @@
-div {
+.container {
     border-top: 5px solid forestgreen;
     border-bottom: 3px dotted blue;
+}
+
+.gamePiece {
+    font-size: 50px;
+    color: blue;
 }
