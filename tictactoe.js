@@ -3,8 +3,9 @@ const container = document.querySelector('.container');
 // Module for Game Board
 
 const gameBoard = (() => {
-    const board = ["x", "o", "x"];
-    return board;
+    return {
+        board : ["x", "o"],
+    }
 })();
 
 // Factory Function for Players
@@ -14,15 +15,17 @@ const playersFactory = (name, age) => {
 };
 
 
+// game flow module
 
-
-function displayMoves () {
-    for (const playerMove of gameBoard) {
-        const gamePiece = document.createElement('p');
-        gamePiece.classList.add('gamePiece');
-        gamePiece.textContent = playerMove;
-        container.appendChild(gamePiece);
-
-
+const gameFlow = (() => {
+    return {
+        displayMoves : function () {
+            for (const playerMove of gameBoard.board) {
+                const gamePiece = document.createElement('p');
+                gamePiece.classList.add('gamePiece');
+                gamePiece.textContent = playerMove;
+                container.appendChild(gamePiece);
+            }
+        }
     }
-};
+})();
