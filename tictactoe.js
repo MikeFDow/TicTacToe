@@ -10,15 +10,19 @@ const gameBoard = (() => {
 
 // Factory Function for Players
 
-const playersFactory = (name, age) => {
-    return {name, age};
+const playersFactory = (name) => {
+    return {name};
 };
 
 
 // game flow module
 
 const gameFlow = (() => {
+    const playerOne = playersFactory(prompt("players ones name?"));
+    const playerTwo = playersFactory(prompt("player twos name?"));
     return {
+        playerOne,
+        playerTwo,
         displayMoves : function () {
             for (const playerMove of gameBoard.board) {
                 const gamePiece = document.createElement('p');

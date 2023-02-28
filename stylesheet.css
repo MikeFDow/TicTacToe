@@ -1,9 +1,27 @@
+body {
+
+}
+
+
+
 .container {
-    border-top: 5px solid forestgreen;
-    border-bottom: 3px dotted blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 650px;
+    height: 650px;
+    position: absolute;
+    top: 100px;
+    left: 33%;
 }
 
 .gamePiece {
     font-size: 50px;
     color: blue;
+}
+
+.container > div {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
 }
